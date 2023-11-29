@@ -1,0 +1,83 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "read_json_file",
+        "kind": 2,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "def read_json_file(filename):\n    try:\n        with open(filename, \"r\") as file:\n            data = json.load(file)\n        return data\n    except FileNotFoundError:\n        print(f\"Error: The file {filename} was not found.\")\n    except json.JSONDecodeError:\n        print(f\"Error: The file {filename} contains invalid JSON.\")\n    except Exception as e:",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "get_connection_data",
+        "kind": 2,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "def get_connection_data():\n    connections = read_json_file(\"connections.json\")\n    if connections is None or 'connection' not in connections or not connections['connection']:\n        return None\n    return connections['connection']\ndef get_user_input(prompt, default=None):\n    user_input = input(prompt).strip() or default\n    return user_input\ndef select_connection(connections):\n    for i, connection in enumerate(connections, start=1):",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_input",
+        "kind": 2,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "def get_user_input(prompt, default=None):\n    user_input = input(prompt).strip() or default\n    return user_input\ndef select_connection(connections):\n    for i, connection in enumerate(connections, start=1):\n        print(f\"{i}.) {connection.get('name', 'Unknown')}\")\n    while True:\n        selection = get_user_input(\"Choose connection number or 'q' to quit: \")\n        if selection.lower() == 'q':\n            quit()",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "select_connection",
+        "kind": 2,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "def select_connection(connections):\n    for i, connection in enumerate(connections, start=1):\n        print(f\"{i}.) {connection.get('name', 'Unknown')}\")\n    while True:\n        selection = get_user_input(\"Choose connection number or 'q' to quit: \")\n        if selection.lower() == 'q':\n            quit()\n        if selection.isdigit() and 1 <= int(selection) <= len(connections):\n            return connections[int(selection) - 1]\n        else:",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "def main():\n    connections = get_connection_data()\n    if not connections:\n        print(\"No connection data available. Please check the JSON file.\")\n        return\n    selected_connection = select_connection(connections)\n    host = selected_connection.get(\"address\")\n    port = selected_connection.get(\"port\")\n    user = selected_connection.get(\"user\", \"tibcorun\")  # Use the provided default username if not specified in JSON\n    sshKeypass = selected_connection.get(\"sshKeypass\", \"\")  # Assuming your JSON has the sshKeypass field",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "privateKeyPath",
+        "kind": 5,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "privateKeyPath = \"openSSHkey.pem\"\nUser = \"tibcorun\"\ndef read_json_file(filename):\n    try:\n        with open(filename, \"r\") as file:\n            data = json.load(file)\n        return data\n    except FileNotFoundError:\n        print(f\"Error: The file {filename} was not found.\")\n    except json.JSONDecodeError:",
+        "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "conn",
+        "description": "conn",
+        "peekOfCode": "User = \"tibcorun\"\ndef read_json_file(filename):\n    try:\n        with open(filename, \"r\") as file:\n            data = json.load(file)\n        return data\n    except FileNotFoundError:\n        print(f\"Error: The file {filename} was not found.\")\n    except json.JSONDecodeError:\n        print(f\"Error: The file {filename} contains invalid JSON.\")",
+        "detail": "conn",
+        "documentation": {}
+    }
+]

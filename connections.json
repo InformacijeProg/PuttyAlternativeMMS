@@ -1,0 +1,329 @@
+{
+    "connection": [
+        {
+            "name": "MAINT ADM 01",
+            "address": "ffm04esbpex01m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT ADM 02",
+            "address": "ffm04esbpex02m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT ADM 03 CODIC",
+            "address": "ffm04esbadm03m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT API 01 (DC1|APACHE)",
+            "address": "ffm04esbpex02m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "ffm04esbapi11m.media-saturn.com",
+            "address": "ffm04esbpex02m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT ADM 02",
+            "address": "ffm04esbpex02m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT API 02 (EMS)",
+            "address": "ffm04esbapi12m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT API 03 (DC2|APACHE)",
+            "address": "ffm04esbapi13m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT API 04 (EMS)",
+            "address": "ffm04esbapi14m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT BW 05",
+            "address": "ffm04esbmtbw05.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT BW 06",
+            "address": "ffM04ESBMTBW06.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT BW 07",
+            "address": "ffM04ESBMTBW07.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT BW 08",
+            "address": "ffm04esbmtbw08.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT EMS 01 (C20|C23) (user: tibadm)",
+            "address": "esbmems01.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT EMS 02 (C20|C23) (user: tibadm)",
+            "address": "esbmems02.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT EMS 03 (T20|R01|R02|H20)",
+            "address": "FFM04ESBEMS03M.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT EMS 04 (T20|R01|R02|H20)",
+            "address": "ffm04esbems04m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "MAINT MASH (user: jbossadm)",
+            "address": "ffm04esbmash01m.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ADM 01",
+            "address": "ffm04esbadm01p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ADM 02",
+            "address": "ffm04esbadm02p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ADM 03 (CODIC|TOMCAT|MongoDB)",
+            "address": "ffm04esbadm03p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD API 01 (DC1|APACHE)",
+            "address": "ffm04esbapi11p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD API 02 (EMS)",
+            "address": "ffm04esbapi12p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD API 03 (DC2|APACHE|HTTP)",
+            "address": "ffm04esbapi13p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD API 04 (EMS)",
+            "address": "ffm04esbapi14p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 01",
+            "address": "ffM04ESBBW01P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 02",
+            "address": "ffM04ESBBW02P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 03",
+            "address": "ffM04ESBBW03P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 04",
+            "address": "ffM04ESBBW04P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 05C",
+            "address": "ffM04ESBBW05CP.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 06",
+            "address": "ffM04ESBBW06P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 07",
+            "address": "ffM04ESBBW07P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 08",
+            "address": "ffM04ESBBW08P.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 09",
+            "address": "ffm04esbbw09p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 10",
+            "address": "ffm04esbbw10p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 11",
+            "address": "ffm04esbbw11p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 12",
+            "address": "ffm04esbbw12p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 13",
+            "address": "ffm04esbbw13p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 14",
+            "address": "ffm04esbbw14p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 15",
+            "address": "ffm04esbbw15p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 16",
+            "address": "ffm04esbbw16p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 17",
+            "address": "ffm04esbbw17p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD BW 18",
+            "address": "ffm04esbbw18p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ELK Cluster 01 (KIBANA)",
+            "address": "ing04esbmon01p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ELK Cluster 02 (KIBANA)",
+            "address": "ing04esbmon02p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD ELK Cluster 03 (KIBANA)",
+            "address": "ing04esbmon03p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 01 (C01|C04)",
+            "address": "ffm04esbpems11p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 02 (C01|C04)",
+            "address": "ffm04esbpems12p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 03 (T01|R01|R02|H01)",
+            "address": "ffm04esbems03p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 04 (T01|R01|R02|H01)",
+            "address": "ffm04esbems04p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 05 (user: tibadm) DISASTER RECOVERY",
+            "address": "esbpems05.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD EMS 06 (user: tibadm) DISASTER RECOVERY",
+            "address": "esbpems06.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD MASH 01 (Jboss|SSH) (user: jbossadm)",
+            "address": "ffm04esbmsh01p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD MONIT 01",
+            "address": "ing04appcfs01p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "PROD PRX 01",
+            "address": "ffm04esbprx01p.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST 03 EMS 02 BW 02 (C02|C03|T02|R02|R03|H02)",
+            "address": "ffm04esbt03.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST 04 EMS 03 BW 03 (C02|C03|T02|R02|R03)",
+            "address": "ffm04esbt04.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST API 01",
+            "address": "ffm04esbapit01.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST API 02",
+            "address": "ffm04esbapit12.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST BW 03",
+            "address": "ffm04esbint03t.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST BW 04",
+            "address": "ffm04esbint04t.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST BW 05",
+            "address": "ffm04esbint05t.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST BW 06",
+            "address": "ffm04esbint06t.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST BW 12",
+            "address": "ffm04esbint12t.media-saturn.com",
+            "port": 22
+        },
+        {
+            "name": "TEST MASH (user: root)",
+            "address": "10.3.244.5.media-saturn.com",
+            "port": 22
+        }
+    ]
+}
