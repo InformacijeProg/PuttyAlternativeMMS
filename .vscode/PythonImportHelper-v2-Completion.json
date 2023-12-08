@@ -18,6 +18,24 @@
         "documentation": {}
     },
     {
+        "label": "paramiko",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "paramiko",
+        "description": "paramiko",
+        "detail": "paramiko",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
         "label": "read_json_file",
         "kind": 2,
         "importPath": "conn",
@@ -78,6 +96,105 @@
         "description": "conn",
         "peekOfCode": "User = \"tibcorun\"\ndef read_json_file(filename):\n    try:\n        with open(filename, \"r\") as file:\n            data = json.load(file)\n        return data\n    except FileNotFoundError:\n        print(f\"Error: The file {filename} was not found.\")\n    except json.JSONDecodeError:\n        print(f\"Error: The file {filename} contains invalid JSON.\")",
         "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "connect_button",
+        "kind": 2,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "def connect_button():\n    selected_index = listbox.curselection()\n    if selected_index:\n        hostname = data['connection'][selected_index[0]]['name']\n        selected_connection = data['connection'][selected_index[0]]['address']\n        username = \"tibcorun\"\n    else:\n        hostname = \"\"\n        selected_connection = \"\"    \n# Create the main window",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "ssh_client",
+        "kind": 2,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "def ssh_client(hostname, port, username, key_filename, command):\n    # Create an SSH client\n    client = paramiko.SSHClient()\n    # Automatically add the server's host key\n    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n    try:\n        # Connect to the SSH server using key-based authentication\n        client.connect(hostname, port=port, username=username, key_filename=key_filename)\n        # Execute the command to open the terminal (replace with the appropriate command for your server)\n        open_terminal_command = 'gnome-terminal'  # Change this based on your server's terminal emulator",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "hostname",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "hostname = \"\"\nport = 22\nusername = \"\"\nkey_filename = \"openSSHkey.pem\"\ncommand =\"\"\ndata =\"\"\nlistbox = None\n#windowSize =(128,720)\n# Load the JSON data\nwith open('connections.json', 'r') as json_file:",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "port",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "port = 22\nusername = \"\"\nkey_filename = \"openSSHkey.pem\"\ncommand =\"\"\ndata =\"\"\nlistbox = None\n#windowSize =(128,720)\n# Load the JSON data\nwith open('connections.json', 'r') as json_file:\n    data = json.load(json_file)",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "username",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "username = \"\"\nkey_filename = \"openSSHkey.pem\"\ncommand =\"\"\ndata =\"\"\nlistbox = None\n#windowSize =(128,720)\n# Load the JSON data\nwith open('connections.json', 'r') as json_file:\n    data = json.load(json_file)\n# Function to handle the \"Connect\" button click",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "key_filename",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "key_filename = \"openSSHkey.pem\"\ncommand =\"\"\ndata =\"\"\nlistbox = None\n#windowSize =(128,720)\n# Load the JSON data\nwith open('connections.json', 'r') as json_file:\n    data = json.load(json_file)\n# Function to handle the \"Connect\" button click\ndef connect_button():",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "listbox",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "listbox = None\n#windowSize =(128,720)\n# Load the JSON data\nwith open('connections.json', 'r') as json_file:\n    data = json.load(json_file)\n# Function to handle the \"Connect\" button click\ndef connect_button():\n    selected_index = listbox.curselection()\n    if selected_index:\n        hostname = data['connection'][selected_index[0]]['name']",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Putty alternative (SSH)\")\n#root.size = windowSize\n# Create a listbox to display connection names\nlistbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names\nfor connection in data['connection']:\n    listbox.insert(tk.END, connection['name'])\n# Create a \"Connect\" button",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "#root.size",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "#root.size = windowSize\n# Create a listbox to display connection names\nlistbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names\nfor connection in data['connection']:\n    listbox.insert(tk.END, connection['name'])\n# Create a \"Connect\" button\nconnect_button = tk.Button(root, text=\"Connect\", command=connect_button)\nconnect_button.pack()",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "listbox",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "listbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names\nfor connection in data['connection']:\n    listbox.insert(tk.END, connection['name'])\n# Create a \"Connect\" button\nconnect_button = tk.Button(root, text=\"Connect\", command=connect_button)\nconnect_button.pack()\n# Start the GUI main loop\nroot.mainloop()",
+        "detail": "pycon",
+        "documentation": {}
+    },
+    {
+        "label": "connect_button",
+        "kind": 5,
+        "importPath": "pycon",
+        "description": "pycon",
+        "peekOfCode": "connect_button = tk.Button(root, text=\"Connect\", command=connect_button)\nconnect_button.pack()\n# Start the GUI main loop\nroot.mainloop()\ndef ssh_client(hostname, port, username, key_filename, command):\n    # Create an SSH client\n    client = paramiko.SSHClient()\n    # Automatically add the server's host key\n    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n    try:",
+        "detail": "pycon",
         "documentation": {}
     }
 ]
