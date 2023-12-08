@@ -18,21 +18,21 @@
         "documentation": {}
     },
     {
-        "label": "paramiko",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "paramiko",
-        "description": "paramiko",
-        "detail": "paramiko",
-        "documentation": {}
-    },
-    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "tkinter",
         "description": "tkinter",
         "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "paramiko",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "paramiko",
+        "description": "paramiko",
+        "detail": "paramiko",
         "documentation": {}
     },
     {
@@ -96,6 +96,51 @@
         "description": "conn",
         "peekOfCode": "User = \"tibcorun\"\ndef read_json_file(filename):\n    try:\n        with open(filename, \"r\") as file:\n            data = json.load(file)\n        return data\n    except FileNotFoundError:\n        print(f\"Error: The file {filename} was not found.\")\n    except json.JSONDecodeError:\n        print(f\"Error: The file {filename} contains invalid JSON.\")",
         "detail": "conn",
+        "documentation": {}
+    },
+    {
+        "label": "connect_ssh",
+        "kind": 2,
+        "importPath": "connect",
+        "description": "connect",
+        "peekOfCode": "def connect_ssh(address, port):\n    ssh_command = f'ssh -i openSSHkey.pem -p {port} tibcorun@{address}'\n    subprocess.run(ssh_command, shell=True)\n# Create the main window\nroot = tk.Tk()\nroot.title(\"Rockin' SSH Connection Manager\")\n# Create a listbox to display connection names\nlistbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names",
+        "detail": "connect",
+        "documentation": {}
+    },
+    {
+        "label": "connect_button",
+        "kind": 2,
+        "importPath": "connect",
+        "description": "connect",
+        "peekOfCode": "def connect_button():\n    selected_index = listbox.curselection()\n    if selected_index:\n        selected_connection = data['connection'][selected_index[0]]\n        connect_ssh(selected_connection['address'], selected_connection['port'])\n# Create a \"Connect\" button\nconnect_button = tk.Button(root, text=\"Connect\", command=connect_button)\nconnect_button.pack()\n# Start the GUI main loop\nroot.mainloop()",
+        "detail": "connect",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "connect",
+        "description": "connect",
+        "peekOfCode": "root = tk.Tk()\nroot.title(\"Rockin' SSH Connection Manager\")\n# Create a listbox to display connection names\nlistbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names\nfor connection in data['connection']:\n    listbox.insert(tk.END, connection['name'])\n# Function to handle the \"Connect\" button click\ndef connect_button():",
+        "detail": "connect",
+        "documentation": {}
+    },
+    {
+        "label": "listbox",
+        "kind": 5,
+        "importPath": "connect",
+        "description": "connect",
+        "peekOfCode": "listbox = tk.Listbox(root, selectmode=tk.SINGLE)\nlistbox.pack()\n# Populate the listbox with connection names\nfor connection in data['connection']:\n    listbox.insert(tk.END, connection['name'])\n# Function to handle the \"Connect\" button click\ndef connect_button():\n    selected_index = listbox.curselection()\n    if selected_index:\n        selected_connection = data['connection'][selected_index[0]]",
+        "detail": "connect",
+        "documentation": {}
+    },
+    {
+        "label": "connect_button",
+        "kind": 5,
+        "importPath": "connect",
+        "description": "connect",
+        "peekOfCode": "connect_button = tk.Button(root, text=\"Connect\", command=connect_button)\nconnect_button.pack()\n# Start the GUI main loop\nroot.mainloop()",
+        "detail": "connect",
         "documentation": {}
     },
     {
