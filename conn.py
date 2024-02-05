@@ -1,5 +1,6 @@
 import json
 import subprocess
+import os
 # Global variables
 privateKeyPath = "openSSHkey.pem"
 User = "tibcorun"
@@ -24,16 +25,12 @@ def get_connection_data():
     
     return connections['connection']
 
-def get_user_input(prompt, default=None):
-    user_input = input(prompt).strip() or default
-    return user_input
-
 def select_connection(connections):
     for i, connection in enumerate(connections, start=1):
         print(f"{i}.) {connection.get('name', 'Unknown')}")
     
     while True:
-        selection = get_user_input("Choose connection number or 'q' to quit: ")
+        selection = input("Choose connection number or 'q' to quit: ").strip()
         if selection.lower() == 'q':
             quit()
         if selection.isdigit() and 1 <= int(selection) <= len(connections):
@@ -54,14 +51,13 @@ def main():
     sshKeypass = selected_connection.get("sshKeypass", "")  # Assuming your JSON has the sshKeypass field
 
     # Construct the SSH command
-    ssh_command = f"ssh -p {port} {user}@{host}"
+    ssh_command = f"putty -ssh {user}@{host} -P {port}"
 
-    # Open a new CMD window and execute the SSH command
+    # Open a new Putty window and execute the SSH command
     try:
-        # The /K keeps the window open, /C would close it after the command runs
-        subprocess.Popen(f"start cmd /K {ssh_command}", shell=True)
+        os.system(ssh_command)
     except FileNotFoundError:
-        print("It seems like there is a problem with CMD or SSH is not installed.")
+        print("It seems like there is a problem with Putty or SSH is not installed.")
 
 if __name__ == "__main__":
     main()
